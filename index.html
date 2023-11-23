@@ -197,19 +197,19 @@
         var timerInterval;
         var timerTime = 0;
         var timerRunning = false;
-
         function startTimer() {
             if (!timerRunning) {
                 timerInterval = setInterval(updateTimer, 1000);
                 timerRunning = true;
+                updateTimerDisplay(); // Call to ensure the timer display is up to date
             }
         }
+
        function resetTimer() {
             stopTimer();
             timerTime = 0;
-            document.getElementById("timer").innerText = "00:00";
+            updateTimerDisplay(); // Call a function to update the displayed timer
         }
-
         function stopTimer() {
             clearInterval(timerInterval);
             timerRunning = false;
