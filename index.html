@@ -207,8 +207,9 @@
         function resetTimer() {
             stopTimer();
             timerTime = 0;
-            document.getElementById("timer").innerText = "00:00";
+            updateTimerDisplay(); // Call a function to update the displayed timer
         }
+
         function stopTimer() {
             clearInterval(timerInterval);
             timerRunning = false;
@@ -216,10 +217,14 @@
 
         function updateTimer() {
             timerTime++;
+            updateTimerDisplay();
+        }
+        function updateTimerDisplay() {
             var minutes = Math.floor(timerTime / 60);
             var seconds = timerTime % 60;
             document.getElementById("timer").innerText = (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
         }
+
     
     </script>
 </body>
