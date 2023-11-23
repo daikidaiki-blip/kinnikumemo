@@ -207,7 +207,7 @@
         function resetTimer() {
             stopTimer();
             timerTime = 0;
-            updateTimer();
+            updateTimer(); // Add this line to update the displayed timer
         }
         function stopTimer() {
             clearInterval(timerInterval);
