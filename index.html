@@ -207,7 +207,7 @@
         function resetTimer() {
             stopTimer();
             timerTime = 0;
-            updateTimer(); // Add this line to update the displayed timer
+            document.getElementById("timer").innerText = "00:00";
         }
         function stopTimer() {
             clearInterval(timerInterval);
