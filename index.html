@@ -204,10 +204,10 @@
                 timerRunning = true;
             }
         }
-        function resetTimer() {
+       function resetTimer() {
             stopTimer();
             timerTime = 0;
-            updateTimerDisplay(); // Call a function to update the displayed timer
+            document.getElementById("timer").innerText = "00:00";
         }
 
         function stopTimer() {
